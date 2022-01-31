@@ -160,8 +160,7 @@ div {
 }
 
 .link:hover,
-.link:focus,
-.link:active {
+.link:focus {
   color: var(--hover-color);
 }
 
@@ -181,10 +180,6 @@ display: flex;
 }
 
 .email {
- 
-  width: 161px;
-  height: 16px;
-  
   margin-right: 30px;
   display: flex;
   align-items: center;
@@ -199,20 +194,21 @@ display: flex;
   display: block;
 }
 
-.email:hover .icon-email {
+.email:hover ,
+.email:focus {
+color: var(--hover-color);
+}
+
+.email:hover .icon-email,
+.email:focus .icon-email{
 fill: #2196F3;
 }
 
-.email:hover,
-.email:focus {
-  color: var(--hover-color);
-}
+
 
 .tel {
-  
   display: flex;
   align-items: center;
-    
 }
 
 .tel:hover .icon-tel {
@@ -226,6 +222,11 @@ fill: #2196F3;
   margin-right: 10px;
   
   display: block;
+}
+
+.tel:hover .icon-tel,
+.tel:focus .icon-tel {
+  fill: #2196F3;
 }
 
 .tel:hover,
@@ -271,7 +272,8 @@ fill: #2196F3;
   border: 0;
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus {
   color: var(--auxiliary-text-color);
 }
 
@@ -384,13 +386,18 @@ fill: #2196F3;
   display: block;
 }
 /* hover посилання */
-.portrait-link:hover {
+.portrait-link:hover,
+.portrait-link:focus {
  background-color: var(--hover-color);
-}
+ }
 /* hover посилання самої іконки */
 .portrait-link:hover .portrait-icon  {
   fill: var(--white-text);
 }
+.portrait-link:focus .portrait-icon  {
+  fill: var(--white-text);
+}
+
 /* section4 picture*/
 
 .pic {
@@ -442,12 +449,15 @@ border-radius: 4px;
 
 }
 .logos-link:hover,
-.logos-link:focus{
+.logos-link:focus {
  border-color: var(--hover-color);
-}
+ }
 
 .logos-link:hover .logos-icon {
-  fill: #2196f3;
+  fill: var(--hover-color);
+}
+.logos-link:focus .logos-icon {
+  fill: var(--hover-color);
 }
 
 
@@ -512,10 +522,6 @@ fill: #AFB1B8;
   margin-right: 0;
 }
 
-.item-portfolio:hover {
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .portfolio-cardtitle {
     margin-bottom: 4px;
 
@@ -533,6 +539,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .portfolio-link {
   text-decoration: none;
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-div {
@@ -559,11 +570,15 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer-content {
- 
-  display: flex;
+   display: flex;
+   /* align-items: baseline; */
   }
 
-.lolofooter {
+  .div-address {
+  width: 231px;
+  }
+
+.logofooter {
   margin-left: auto;
   margin-right: 0;
   padding: 0;
@@ -576,10 +591,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .footer-span {
   color: var(--white-text);
-}
-
-.list-footer {
-  width: 231px;
 }
 
 .footer-map {
@@ -637,7 +648,7 @@ margin-left: 70px;
   text-align: center;
   letter-spacing: 0.03em;
 
-  margin-top: -40px;
+  margin-top: 15px;
   margin-bottom: 20px;
  
   text-align: left;
